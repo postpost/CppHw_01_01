@@ -70,14 +70,12 @@ int main()
         wf << n << std:: endl; //write size of the 2nd array
 
         int* temp_array01 = new int[n]; //create 1st temp array
-
-        for (int j = 0; j < n; ++j) {
-            if (j == 0) {
-                temp_array01[n-1] = array_01[0];
-
-            }
+       
+        for (int j = 1; j < n; ++j) {     
             temp_array01[j-1] = array_01[j];
         }
+        temp_array01[n - 1] = array_01[0];
+        
 
         //Write 1st array to the file
         for (int i = 0; i < n; ++i) {
